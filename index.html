@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>marquee</title>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.5/ace.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.5/mode-javascript.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.5/theme-monokai.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.5/worker-javascript.js" type="text/javascript" charset="utf-8"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./jquery.marquee.min.js"></script>
+</head>
+
+<body>
+
+<div id="container">
+  
+  <div class="dragbar">
+    <div class="close"></div>
+    <div class="minimize"></div>
+    <div class="maximize"></div>
+    <span>Brrrrr.html</span>
+  </div>
+  
+  <div id="editor"></div>
+
+   <div class="marquee ace-monokai">
+      <div class="ace_line" style="height:19.166671752929688px">
+         <span class=" ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class=" ace_meta ace_tag ace_tag-name ace_xml">marquee</span><span class=" ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span>
+      </div>
+      
+      <div class="ace_line" style="height:19.166671752929688px">
+         <span class=" ace_string">&nbsp;&nbsp;&nbsp;Haha HTML go</span> <span class=" ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class=" ace_meta ace_tag ace_tag-name ace_xml">br</span><span class=" ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span><span class=" ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class=" ace_meta ace_tag ace_tag-name ace_xml">br</span><span class=" ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span><span class=" ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class=" ace_meta ace_tag ace_tag-name ace_xml">br</span><span class=" ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span><span class=" ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class=" ace_meta ace_tag ace_tag-name ace_xml">br</span><span class=" ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span>
+      </div>
+      
+      <div class="ace_line" style="height:19.166671752929688px">
+<span class=" ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;&#47;</span><span class=" ace_meta ace_tag ace_tag-name ace_xml">marquee</span><span class=" ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span>
+      </div>
+   </div>
+
+</div>
+
+
+<style>
+.ace-monokai .ace_marker-layer .ace_selection {
+  background: transparent;
+}
+</style>
+
+<script>
+var editor = ace.edit("editor");
+var meme =
+`<!DOCTYPE html>
+<html lang="en">
+<body>
+   <p>
+      Nooo you can’t just use semantic markup
+      for visual layout, that’s what CSS is for.
+   </p>
+
+
+
+
+
+</body>
+</html>
+`;
+
+editor.setTheme("ace/theme/monokai");
+editor.getSession().setMode("ace/mode/javascript");
+editor.setFontSize(14);
+editor.$blockScrolling = Infinity;
+editor.setReadOnly(true);
+editor.setValue(meme);
+editor.resize()
+
+// disable syntax checking
+editor.getSession().setUseWorker(false);
+
+
+$(document).ready(function(){
+   $('.marquee').marquee({
+      duration: 5000,
+   });
+});
+
+</script>
+</body>
+</html>

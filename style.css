@@ -1,0 +1,78 @@
+html,body {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  background: url('tiger.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+#editor {
+  position: absolute;
+  top: 22px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+#container {
+  border-radius: 0.4em;
+  background-color: #272822;
+  font-size: 13px;
+  position: relative;
+  top: 100px;
+  left: 200px;
+  width: 470px;
+  height: 440px;
+  border: 1px solid #666;
+  box-shadow: 0.35em 0.35em 0.5em rgba(0,0,0,0.4);
+}
+
+div.dragbar {
+  border-radius: 0.4em 0.4em 0em 0em;
+  background-image: url(dragbar.png);
+  background-repeat: repeat-x;
+  height: 22px;
+}
+
+div.dragbar span {
+  font-family: verdana;
+  margin-left: 140px;
+  position: relative;
+  top: 2px;
+}
+
+div.close, div.minimize, div.maximize {
+  border-radius: 1em;
+  float: left;
+  height: 11px;
+  width: 11px;
+  margin-top: 4px;
+  margin-left: 5px;
+}
+
+div.close {
+  background-color: #ff564f;
+  border: 1px solid #dd3f3a;
+}
+
+div.minimize {
+  background-color: #ffb429;
+  border: 1px solid #dc9718;
+}
+
+div.maximize {
+  background-color: #24c238;
+  border: 1px solid #14a328;
+}
+
+/* -------------------------------------- */
+
+.marquee {
+  position: relative;
+  top: 146px;
+  width: 470px;
+  overflow: hidden;
+  font-size: 16px;
+  font-family: "Monaco", "Menlo", "Ubuntu Mono", "Consolas", "source-code-pro", monospace;
+}
